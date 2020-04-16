@@ -4,13 +4,13 @@ using System.Text;
 
 namespace module4
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+	class Program
+	{
+		static void Main(string[] args)
+		{
 			Console.WriteLine("Please enter the text: ");
-			StringBuilder stringbuilder = new StringBuilder();
-			otherMain();
+			var stringbuilder = new StringBuilder();
+			ReadLine();
 			try
 			{
 				while (true)
@@ -18,9 +18,9 @@ namespace module4
 					var str = Console.ReadLine();
 					if (string.IsNullOrWhiteSpace(str))
 					{
-						throw new NullReferenceException("NullReferenceException: string is empty");
+						throw new NullReferenceException("string is empty");
 					}
-					if (str.IndexOf("-quit", StringComparison.Ordinal) != -1)
+					if (str.IndexOf("-fin", StringComparison.Ordinal) != -0b1)
 					{
 						break;
 					}
@@ -42,10 +42,10 @@ namespace module4
 			}
 		}
 
-		static void otherMain()
+		static void ReadLine()
 		{
 			var str = Console.ReadLine();
-			var t = str[0];
+			var type = str[0];
 		}
 	}
 }
